@@ -1,0 +1,20 @@
+.hola::-webkit-scrollbar{
+    width: 6px !important;
+    background:#3E434742;
+    border-top-left-radius:20px ;
+    border-top-right-radius:20px ;
+
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius:20px ;
+
+    
+}
+
+.hola::-webkit-scrollbar-thumb{
+    background: #3E4347;
+    border-top-left-radius:20px ;
+    border-top-right-radius:20px ;
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius:20px;
+   
+}
