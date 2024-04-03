@@ -12,10 +12,6 @@ import { useTranslation } from "react-i18next";
 
 export const ListLinkSidebar = ({
   className,
-  rounded,
-  onMouseEnter,
-  onMouseLeave,
- 
 }: {
   className?: any;
   rounded?: any;
@@ -99,32 +95,22 @@ export const ListLinkSidebar = ({
       path: "",
       icon: <IconLanguage className={'max-2xl:w-[18px] max-2xl:h-[16.66px]'} />,
       className: "",
-      text: t("Share.Sidebar.BtnLanguage"),
+      text: "Settings",
     },
     {
       id: 2,
       path: "",
       icon: <IconLogout className={'max-2xl:w-[18px] max-2xl:h-[16.66px]'} />,
       className: "",
-      text: t("Share.Sidebar.BtnLogOut"),
+      text: "Sign Out",
     },
-    {
-      id: 3,
-      path: "",
-      icon: <IconMessageInfo className={'max-2xl:w-[18px] max-2xl:h-[16.66px]'}/>,
-      className: `${"text-[12px]"}`,
-      text: t("Share.Sidebar.Info"),
-    },
+    
   ];
 
   return (
     <Sidebar
-      listLinksHeader={listLinksHeader}
-      listLinksFooter={listLinksFooter}
+    
       className={className}
-      rounded={rounded}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
     />
   );
 };

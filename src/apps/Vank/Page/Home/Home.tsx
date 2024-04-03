@@ -3,6 +3,10 @@ import { SectionNav } from "./SectionNav/SectionNav";
 import { SectionAccounts } from "./SectionAccounts/SectionAccounts";
 import { SectionCards } from "./SectionCards/SectionCards";
 import { SectionCryto } from "./SectionCryto/SectionCryto";
+import { IconNotification } from "@/assets/IconV2/IconNotification";
+import { IconUser } from "@/assets/IconV2/IconUser";
+import { IconPencilUpdate } from "@/assets/IconV2/IconPencilUpdate";
+import { SectionQuickActionsCards } from "./SectionQuickActionsCards/SectionQuickActionsCards";
 
 const Home = () => {
   const [value, setValue] = useState(1);
@@ -12,55 +16,29 @@ const Home = () => {
   }, [value]);
 
   return (
-    <div className="panel responsive-home 2xl:h-[708px] 2xl:w-[622px]   xl:w-[45%]  xl:h-full   xl:p-[24px]  bg-[#191E25] 2xl:p-[36px]  text-body    rounded-[32px]  max-sm:h-[100%] max-lg:h-[100%]  max-sm:p-[36px] max-lg:p-[36px] ">
-      <div className="pane-content1 2xl:w-[550px] 2xl:h-full flex flex-col xl:h-full overflow-hidden">
-        <SectionNav
-          value={value}
-          onclickResume={() => {
-            setValue(1);
-          }}
-          onclickAccounts={() => {
-            setValue(2);
-          }}
-          onclickCards={() => {
-            setValue(3);
-          }}
-          onClickWallets={() => {
-            setValue(4);
-          }}
-        />
-        <div
-          className={`2xl:pt-[9px] responsive-home-cards  2xl:w-full 2xl:h-[580px]  gap-y-12  xl:max-2xl:gap-y-2  flex flex-col   relative   max-2xl:h-[28.1713rem] xl:h-full max-sm:justify-between max-sm:h-[100%] max-lg:justify-between max-lg:h-[100%] `}
-        >
-          {value === 1 || value === 2 ? (
-            <SectionAccounts onclik={()=>setValue(2)}
-              moreStyle={`block  transition-opacity duration-700 trasaction-display duration-1000 ${
-                value !== 1 ? "absolute top-0 left-0 right-0" : ""
-              }`}
-            />
-          ) : (
-            <SectionAccounts moreStyle={"opacity-0"} onclik={''}/>
-          )}
-          {value === 1 || value === 3 ? (
-            <SectionCards onclik={()=>setValue(3)}
-              moreStyle={`block transition-opacity duration-700 trasaction-display duration-1000  ${
-                value !== 1 ? "absolute top-0 left-0 right-0 " : ""
-              }`}
-            />
-          ) : (
-            <SectionCards moreStyle={"opacity-0"} onclik={''}/>
-          )}
-          {value === 1 || value === 4 ? (
-            <SectionCryto onclick={()=>setValue(4)}
-              moreStyle={`block transition-opacity duration-700    ${
-                value !== 1 ? "absolute   ":""
-              }`}
-            />
-          ) : (
-            <SectionCryto moreStyle={"opacity-0 "} />
-          )}
+    <div className="">
+      <div className="flex flex-col ">
+        <div className="w-full h-[3rem] flex justify-end  pt-1">
+          <div className=" w-[8.75rem] h-[3rem] flex gap-6">
+            <div className="border-[1px] border-[#C9CBCE] rounded-full w-12 h-12 flex items-center justify-center">
+              <IconNotification />
+            </div>
+            <div className="bg-[#F2F5F7] rounded-full w-12 h-12 flex items-center justify-center">
+              <IconUser />
+            </div>
+          </div>
         </div>
+        <section className="">
+          <div className="mt-[-8px] flex items-center">
+            <h1 className="text-[1.75rem] p-0 m-0  text-[#5E6061 font-bold">{"Hi Johanna,"}</h1>
+            <IconPencilUpdate/>
+          </div>
+          <div>
+            <SectionQuickActionsCards/>
+          </div>
+        </section>
       </div>
+
     </div>
   );
 };

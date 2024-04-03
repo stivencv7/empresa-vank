@@ -1,150 +1,125 @@
+
 import VankLogo from "@/assets/Icon/VankLogo";
-import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-// import {Rounded} from "../../../../assets/Rounded";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { IconHome } from "@/assets/IconV2/IconHome";
+import { IconBalances } from "@/assets/IconV2/IconBalances";
+import IconCard from "@/assets/IconV2/IconCard";
+import { IconCrypto } from "@/assets/IconV2/IconCrypto";
+import { IconUsers } from "@/assets/IconV2/IconUsers";
+import { IconSettings } from "@/assets/IconV2/IconSettings";
+import { IconLogout } from "@/assets/IconV2/IconLogout";
 export const Sidebar = ({
   className,
-  listLinksHeader = [],
-  listLinksFooter = [],
-  rounded,
-  onMouseEnter,
-  onMouseLeave,
-  
 }: {
   className?: string;
   listLinksHeader?: any[];
   listLinksFooter?: any[];
-  rounded?: any;
-  onMouseEnter?: any;
-  onMouseLeave?: any;
 }) => {
+  
   const languages = [
     { language: "Spanish", status: false },
     { language: "English", status: false },
   ];
 
-  const [visibleSidevar, setVisibleSidebar] = useState(false);
-  const [colorIcon,setColorIcon]=useState(0)
-  const handleVisible = () => {
-    alert("hola");
+  const [t, i18n] = useTranslation("global");
+  const [c, setC] = useState<string>("");
 
-    setVisibleSidebar(true);
-  };
 
-  const w = 258;
+  const listLinksHeader = [
+    {
+      id: "1",
+      path: "",
+      icon:<IconHome/>,
+      text: t("Share.Sidebar.Home"),
+      className: `${"text-[18px] max-2xl:text-[15px]"}`,
+      color:false
+    },
+    {
+      id: "2",
+      path: "transactions",
+      icon:  <IconBalances />,
+      text: "Balances",
+      className: `${"text-[18px] max-2xl:text-[15px]"}`,
+    },
+    {
+      id: "3",
+      path: "transactions",
+      icon:  <IconCard />,
+      text: "Cards",
+      className: `${"text-[18px] max-2xl:text-[15px]"}`,
+    },
+    {
+      id: "4",
+      path: "transactions",
+      icon: <IconCrypto />,
+      text: "Crypto",
+      className: `${"text-[18px] max-2xl:text-[15px]"}`,
+    },
+    
+    {
+      id: "5",
+      path: "hola",
+      icon: <IconUsers/>,
+      text: t("Share.Sidebar.Beneficiaries"),
+      className: `${"text-[18px] max-2xl:text-[15px]"}`,
+    },
+  ]
+
+  const listLinksFooter = [
+    {
+      id: 1,
+      path: "",
+      icon: <IconSettings/>,
+      className: "",
+      text: "Settings",
+    },
+    {
+      id: 2,
+      path: "",
+      icon:<IconLogout/>,
+      className: "",
+      text: "Sign Out",
+    },
+  ]
 
   return (
-    <div
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      className={className}
-    >
-      {rounded}
-      {/* <Rounded
-        fill={'wi'}
-        className="absolute 2xl:-top-[5px] 2xl:-right-[55px] md:-top-[17px] md:-right-[55px]  "
-      />
-      */}
-      {/* pb-15px */}
-      <div>
-      <VankLogo
-            className="2xl:w-52 2xl:h-[52px] lg:w-[115px] sm:h-[29px]   xl:h-[32px]"
-            fill={"#14181F"}
-          />
-      </div>
-      <nav className="h-[87%] flex flex-col justify-between 2xl:pt-[40px] sm:pt-20 xl:pt-[50px]  w-full ">
-        <div className="h-full flex flex-col  pb-[0px] justify-between w-full ">
-          <ul className="media-sidebar-icons1 flex flex-col 2xl:gap-4 lg:gap-2 sm:gap-2 xl:gap-2 w-full ">
-            {listLinksHeader.map((item,index) => (
-              <NavLink
-                onClick={()=>setColorIcon(index)}
-                key={item.id}
-                to={`/${item.path}`}
-                className={`group-hover: ${item.className} flex  items-center   h-[44px] b   w-[186px]  gap-[4px]  text-icons`}
-              >
-                <p className="w-[1px]  h-[18px] pl-5 text-type">{item.icon}</p>
-                <p className="     pr-[0px]  relative -right-10    duration-500 group-hover:block text-[#5A5D5A]">
-                  {item.text}
-                </p>
-              </NavLink>
-            ))}
-          </ul>
-          {/*    
-          <ul className="relative flex flex-col xl:h-[170px] xl:py-3 xl:justify-between  group-hover:xl:h-[220px] md:h-[170px] md:justify-between group-hover:gap-[20px]   w-full   justify-end ">
-            {listLinksFooter.map((item) => (
-              <div
-                className={` pl-5 ${
-                  item.id != 3
-                    ? "group-hover:ml-2 cursor-pointer group-hover:bg-[#3E4347] group-hover:p-[10px] group-hover:pl-[35px] group-hover:w-[169px] group-hover:rounded-[33px]  "
-                    : "group-hover:pl-[0px]"
-                } `}
-                onClick={
-                  item.id === 1
-                    ? () =>
-                        setVisibleSidebar((): any => {
-                          visibleSidevar
-                            ? setVisibleSidebar(false)
-                            : setVisibleSidebar(true);
-                        })
-                    : undefined
-                }
-              >
-                <button
-                  className={`text-[#EFF0F1] ${
-                    item.id != 3 ? "flex justify-around gap-2" : ""
-                  }`}
-                  onClick={
-                    item.id === 1
-                      ? () =>
-                          setVisibleSidebar((): any => {
-                            visibleSidevar
-                              ? setVisibleSidebar(false)
-                              : setVisibleSidebar(true);
-                          })
-                      : undefined
-                  }
-                >
-                  <p className={`${item.id != 3 ? "" : "group-hover:hidden "}`}>
-                    {item.icon}
-                  </p>
-                  <p
-                    className={`${
-                      item.id != 3
-                        ? ""
-                        : "text-[12px] font-[700] leading-[15.6px]  text-center w-[217px] relative left-[-14px]"
-                    } hidden group-hover:block`}
-                  >
-                    {item.text}
-                  </p>
-                </button>
-              </div>
-            ))}
+    <div className={className} >
+      <div className=" w-[17.4375rem] h-[35.9688rem] flex  flex-col gap-y-8">
+        <div className=" w-[17.4375rem] h-[107px] flex items-center justify-center">
+            <VankLogo fill="#14181F" className="w-52 h-[4.4375rem]" />
+        </div> 
+        
+        <nav className="w-[17.4375rem]  flex flex-col items-center px-6">
+          {listLinksHeader.map((item,index)=>(
+            <li className="list-none w-[14.375rem] px-3 py-[0.625rem]">
+              <NavLink key={index} to={item.path} className={'flex    gap-4'}>
+              <span>
+                {item.icon}
+              </span>
+              <p>{item.text}</p>
 
-            <ul
-              className={`${
-                visibleSidevar
-                  ? "block opacity-0 group-hover:opacity-100"
-                  : "hidden "
-              } top-0 right-2 gap-[6px] bg-[#232428] w-[170px] h-[122px] absolute text-[#FFFFFF] text-[16px] flex flex-col items-center justify-center rounded-[12px]`}
-            >
-              {languages.map((item) => (
-                <li
-                  className="hover:bg-[#3E4347] py-[10px] px-[50px] cursor-pointer "
-                  onClick={() =>
-                    setVisibleSidebar((): any => {
-                      visibleSidevar
-                        ? setVisibleSidebar(false)
-                        : setVisibleSidebar(true);
-                    })
-                  }
-                >
-                  {item.language}
-                </li>
-              ))}
-                </ul>
-                </ul>*/}
-        </div>
-      </nav>
+            </NavLink>
+            </li>
+          ))}
+        </nav>
+      </div>
+
+      <div className="w-[17.4375rem] h-[6.75rem] px-6">
+       <ul>
+        {listLinksFooter.map((item)=>(
+          <li className=" w-[14.4375rem] h-11 px-3 py-[0.625rem]">
+            <button className="flex items-center w-[7.1875rem] h-6 gap-[16px]">
+              <span>
+                {item.icon}
+              </span>
+              {item.text}
+            </button>
+        </li>
+        ))}
+       </ul>
+      </div>
     </div>
   );
 };
