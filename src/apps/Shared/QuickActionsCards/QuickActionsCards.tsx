@@ -1,15 +1,16 @@
 import React from 'react'
 
 interface QuickActionsCards{
-    icon:any,
-    text:string
+    icon:any;
+    text:string;
+    moreStyle:string;
 }
 
-export const QuickActionsCards = ({icon,text}:QuickActionsCards) => {
+export const QuickActionsCards = ({icon,text,moreStyle}:QuickActionsCards) => {
   return (
-    <div className='bg-yellow-400  2xl:w-[218px] h-[200px] rounded-2xl p-10 gap-6'>
+    <div className={`${moreStyle} 2xl:w-[218px] h-[200px] rounded-2xl p-10 gap-6 flex flex-col items-center `}>
         <div>
-            <img src={icon} alt="" />
+            {icon}
         </div>
 
         <div>

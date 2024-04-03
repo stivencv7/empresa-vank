@@ -31,10 +31,11 @@ const Home = () => {
         <section className="">
           <div className="mt-[-8px] flex items-center">
             <h1 className="text-[1.75rem] p-0 m-0  text-[#5E6061 font-bold">{"Hi Johanna,"}</h1>
-            <IconPencilUpdate/>
+            <IconPencilUpdate />
           </div>
-          <div>
-            <SectionQuickActionsCards/>
+          <div className="flex flex-col gap-10">
+            <p className=''>{"What would you like to do today?"}</p>
+            <SectionQuickActionsCards />
           </div>
         </section>
       </div>
