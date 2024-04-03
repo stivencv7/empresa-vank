@@ -1,3 +1,4 @@
+import VankLogo from "@/assets/Icon/VankLogo";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 // import {Rounded} from "../../../../assets/Rounded";
@@ -45,25 +46,31 @@ export const Sidebar = ({
       />
       */}
       {/* pb-15px */}
-      <nav className="h-[87%] flex flex-col justify-between 2xl:pt-[40px] sm:pt-20 xl:pt-[50px]  group-hover:w-[100%] ">
-        <div className="h-full flex flex-col  pb-[0px] justify-between group-hover:w-full ">
-          <ul className="media-sidebar-icons1 flex flex-col 2xl:gap-[36px] lg:gap-5 sm:gap-[36px] xl:gap-[36px]   group-hover:w-full ">
+      <div>
+      <VankLogo
+            className="2xl:w-52 2xl:h-[52px] lg:w-[115px] sm:h-[29px]   xl:h-[32px]"
+            fill={"#14181F"}
+          />
+      </div>
+      <nav className="h-[87%] flex flex-col justify-between 2xl:pt-[40px] sm:pt-20 xl:pt-[50px]  w-full ">
+        <div className="h-full flex flex-col  pb-[0px] justify-between w-full ">
+          <ul className="media-sidebar-icons1 flex flex-col 2xl:gap-4 lg:gap-2 sm:gap-2 xl:gap-2 w-full ">
             {listLinksHeader.map((item,index) => (
               <NavLink
                 onClick={()=>setColorIcon(index)}
                 key={item.id}
                 to={`/${item.path}`}
-                className={`group-hover: ${item.className} flex items-center  h-[25px]   w-[186px]  gap-[4px]  text-icons `}
+                className={`group-hover: ${item.className} flex  items-center   h-[44px] b   w-[186px]  gap-[4px]  text-icons`}
               >
                 <p className="w-[1px]  h-[18px] pl-5 text-type">{item.icon}</p>
-                <p className="  mt-2   pr-[0px]  relative -right-10   h-full  duration-500 group-hover:block opacity-0 group-hover:opacity-100">
+                <p className="     pr-[0px]  relative -right-10    duration-500 group-hover:block text-[#5A5D5A]">
                   {item.text}
                 </p>
               </NavLink>
             ))}
           </ul>
-
-          <ul className="relative flex flex-col xl:h-[170px] xl:py-3 xl:justify-between  group-hover:xl:h-[220px] md:h-[170px] md:justify-between group-hover:gap-[20px]   w-[186px]   justify-end ">
+          {/*    
+          <ul className="relative flex flex-col xl:h-[170px] xl:py-3 xl:justify-between  group-hover:xl:h-[220px] md:h-[170px] md:justify-between group-hover:gap-[20px]   w-full   justify-end ">
             {listLinksFooter.map((item) => (
               <div
                 className={` pl-5 ${
@@ -134,8 +141,8 @@ export const Sidebar = ({
                   {item.language}
                 </li>
               ))}
-            </ul>
-          </ul>
+                </ul>
+                </ul>*/}
         </div>
       </nav>
     </div>

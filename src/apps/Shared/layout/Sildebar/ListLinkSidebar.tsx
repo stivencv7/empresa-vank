@@ -35,23 +35,48 @@ export const ListLinkSidebar = ({
       path: "",
       icon: <IconHaus className={'max-2xl:w-[18px] max-2xl:h-[16.66px]'} fill={'#ffed00'}/>,
       text: t("Share.Sidebar.Home"),
-      className: `${"text-[16px] max-2xl:text-[15px]"}`,
+      className: `${"text-[18px] max-2xl:text-[15px]"}`,
       color:false
     },
     {
       id: "2",
       path: "transactions",
       icon: <IconMoneyDolar className={'max-2xl:w-[18px] max-2xl:h-[16.66px]'}/>,
-      text: t("Share.Sidebar.Transaction"),
-      className: `${"text-[16px] max-2xl:text-[15px]"}`,
+      text: "Balances",
+      className: `${"text-[18px] max-2xl:text-[15px]"}`,
     },
     {
       id: "3",
+      path: "transactions",
+      icon: <IconMoneyDolar className={'max-2xl:w-[18px] max-2xl:h-[16.66px]'}/>,
+      text: "Cards",
+      className: `${"text-[18px] max-2xl:text-[15px]"}`,
+    },
+    {
+      id: "4",
+      path: "transactions",
+      icon: <IconMoneyDolar className={'max-2xl:w-[18px] max-2xl:h-[16.66px]'}/>,
+      text: "Crypto",
+      className: `${"text-[18px] max-2xl:text-[15px]"}`,
+    },
+    
+    
+    {
+      id: "5",
       path: "hola",
       icon: <IconUsers className={'max-2xl:w-[18px] max-2xl:h-[16.66px]'}/>,
       text: t("Share.Sidebar.Beneficiaries"),
-      className: `${"text-[16px] max-2xl:text-[15px]"}`,
+      className: `${"text-[18px] max-2xl:text-[15px]"}`,
     },
+
+    {/*{
+      id: "5",
+      path: "transactions",
+      icon: <IconMoneyDolar className={'max-2xl:w-[18px] max-2xl:h-[16.66px]'}/>,
+      text: t("Share.Sidebar.Transaction"),
+      className: `${"text-[16px] max-2xl:text-[15px]"}`,
+    },*/}
+    
     // {
     //   id: "4",
     //   path: "hola",

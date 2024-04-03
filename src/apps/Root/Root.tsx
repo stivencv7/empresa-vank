@@ -9,16 +9,16 @@ export const Root = () => {
   const [histry, setHistory] = useState(false);
 
   return (
-    <div className="h-[100vh] bg-[#191E25]">
-      <Header
+    <div className="h-[100vh]">
+      {/*<Header
         className={
-          "relative h-[10%] w-[100%] px-[36px] bg-[#191E25] flex items-center "
+          "relative h-[10%] w-[100%] px-[36px]  flex items-center "
         }
-      />
+      />*/}
       {/* estamos viendo el sm y el md */}
 
       <ListLinkSidebar
-        className={`h-[90%] absolute  z-[1000] hover:w-[258px] pt-[34px] w-[120px] flex  bg-[#191E25]  overflow-hidden  transition-width duration-700 ease-in-out float-left   group  flex-col px-[31px]   xl:px-[31px] `}
+        className={`h-full absolute  z-[1000] pt-[34px] w-[17.4375rem] flex  bg-white  overflow-hidden  transition-width duration-700 ease-in-out float-left   group  flex-col px-[31px]   xl:px-[31px] `}
         onMouseEnter={() => setEnter(true)}
         onMouseLeave={() => setEnter(false)}
       />
