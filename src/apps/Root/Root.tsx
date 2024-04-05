@@ -18,9 +18,9 @@ export const Root = () => {
       />*/}
       {/* estamos viendo el sm y el md */}
 
-      <Sidebar className={`h-full  w-[17.4375rem] flex flex-col justify-between pt-[1.125rem]`}/>
+      <Sidebar className={`h-full   w-[17.4375rem] flex flex-col justify-between pt-[1.125rem]`}/>
 
-      <div className=" w-full pt-8 px-16">
+      <div className=" w-full pt-8 px-16 flex  overflow-hidden">
         <Outlet />
       </div>
     </div>
