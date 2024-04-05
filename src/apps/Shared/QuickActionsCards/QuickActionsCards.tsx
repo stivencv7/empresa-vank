@@ -11,12 +11,12 @@ interface QuickActionsCards{
 
 export const QuickActionsCards = ({icon,text,moreStyle,onMouseEnter,onMouseLeave}:QuickActionsCards) => {
   return (
-    <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className={`${moreStyle} relative overflow-hidden 2xl:w-[230px] h-[180px] rounded-2xl p-10 gap-6 flex flex-col items-center`}>
+    <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className={`${moreStyle} cursor-pointer relative overflow-hidden 2xl:w-[235px] 2xl:h-[180px] 2xl:text-lg rounded-2xl p-10 gap-6 flex flex-col items-center`}>
         <div className=''>
             {icon}
         </div>
 
-        <div className='absolute bottom-5 text-lg '>
+        <div className='absolute bottom-5  '>
             <p className='leading-6 font-bold'>{text}</p>
         </div>
       

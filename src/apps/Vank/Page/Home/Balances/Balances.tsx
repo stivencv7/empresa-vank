@@ -8,12 +8,12 @@ import React from 'react'
 export const Balances = () => {
   return (
     <>
-        <h1>Balances</h1>
-        <div className='grid grid-cols-4 gap-[18px]'>
+        <h1 className='text-[#5E6061] text-xl'>Balances</h1>
+        <div className='grid grid-cols-4 gap-[30px] text-[18px]'>
             <BalancesCard icon={<IconDolar/>} text={'Total Balance'} amount={`${'1,420.72'} USD`}/>
-            <BalancesCard icon={<IconCards/>} text={'Total Balance'} amount={`${'1,420.72'} USD`}/>
-            <BalancesCard icon={<IconCryptoBalances/>} text={'Total Balance'} amount={`${'1,420.72'} USD`}/>
-            <BalancesCard icon={<IconAccounts/>} text={'Total Balance'} amount={`${'1,420.72'} USD`}/>
+            <BalancesCard icon={<IconCards/>} text={'Cards'} amount={`${'1,420.72'} USD`}/>
+            <BalancesCard icon={<IconCryptoBalances/>} text={'Crypto'} amount={`${'1,420.72'} USD`}/>
+            <BalancesCard icon={<IconAccounts/>} text={'Account'} amount={`${'1,420.72'} USD`}/>
         </div>
     </>
   )

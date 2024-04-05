@@ -10,6 +10,7 @@ import { IconCrypto } from "@/assets/IconV2/IconCrypto";
 import { IconUsers } from "@/assets/IconV2/IconUsers";
 import { IconSettings } from "@/assets/IconV2/IconSettings";
 import { IconLogout } from "@/assets/IconV2/IconLogout";
+import { IconHelpCenter } from "@/assets/IconV2/IconHelpCenter";
 export const Sidebar = ({
   className,
 }: {
@@ -65,6 +66,13 @@ export const Sidebar = ({
       text: t("Share.Sidebar.Beneficiaries"),
       className: `${"text-[18px] max-2xl:text-[15px]"}`,
     },
+    {
+      id: "5",
+      path: "hola",
+      icon: <IconHelpCenter/>,
+      text: t("Help center"),
+      className: `${"text-[18px] max-2xl:text-[15px]"}`,
+    },
   ]
 
   const listLinksFooter = [
@@ -91,9 +99,9 @@ export const Sidebar = ({
             <VankLogo fill="#14181F" className="w-52 h-[4.4375rem]" />
         </div> 
         
-        <nav className="w-[17.4375rem]  flex flex-col items-center px-6">
+        <nav className="w-[17.4375rem]  flex gap-2 flex-col items-center px-6  ">
           {listLinksHeader.map((item,index)=>(
-            <li className="list-none w-[14.375rem] px-3 py-[0.625rem]">
+            <li className="list-none w-[14.375rem] px-3 py-[0.625rem] text-[#5A5D5A]">
               <NavLink key={index} to={item.path} className={'flex    gap-4'}>
               <span>
                 {item.icon}
@@ -110,7 +118,7 @@ export const Sidebar = ({
        <ul>
         {listLinksFooter.map((item)=>(
           <li className=" w-[14.4375rem] h-11 px-3 py-[0.625rem]">
-            <button className="flex items-center w-[7.1875rem] h-6 gap-[16px]">
+            <button className="flex items-center w-[7.1875rem] h-6 gap-[16px] text-[#5A5D5A]">
               <span>
                 {item.icon}
               </span>
