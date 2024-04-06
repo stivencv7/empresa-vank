@@ -79,4 +79,11 @@ nav a.active {
   
 }
 
+@layer components{
+ 
+ 
+  .quickActionsCards{
+    @apply bg-[var(--yellow)] hover:bg-[#191E25] hover:text-[#FFED00] ;
+  }
+}
 

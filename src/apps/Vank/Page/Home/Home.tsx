@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
-import { IconNotification } from "@/assets/IconV2/IconNotification";
-import { IconUser } from "@/assets/IconV2/IconUser";
-import { IconPencilUpdate } from "@/assets/IconV2/IconPencilUpdate";
+import { IconNotification,IconPencilUpdate} from "@/assets/IconV2/IconsSvg";
+
 import { SectionQuickActionsCards } from "./SectionQuickActionsCards/SectionQuickActionsCards";
 import { Balances } from "./Balances/Balances";
 import { TransactionHistory } from "./TransactionHistory/TransactionHistory";
-import { Link } from "react-router-dom";
 import { Banner } from "./Banner/Banner";
-import { ArrowHide } from "@/assets/Icon/ArrowHide";
 import { ModalProfile } from "./ModalProfile/ModalProfile";
 
 const Home = () => {

@@ -1,9 +1,5 @@
 import { BalancesCard } from '@/apps/Shared/BalancesCard/BalancesCard'
-import { IconAccounts } from '@/assets/IconV2/IconAccounts'
-import { IconCards } from '@/assets/IconV2/IconCards'
-import { IconCryptoBalances } from '@/assets/IconV2/IconCryptoBalances'
-import { IconDolar } from '@/assets/IconV2/IconDolar'
-import React from 'react'
+import { IconAccounts,IconCards,IconCryptoBalances,IconDolar } from '@/assets/IconV2/IconsSvg'
 
 export const Balances = () => {
   return (

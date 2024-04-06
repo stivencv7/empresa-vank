@@ -1,5 +1,5 @@
 import { CustomCircle } from '@/apps/Shared/CustomCircle/CustomCircle'
-import { IconArrow } from '@/assets/IconV2/IconArrow'
+import { IconArrow } from '@/assets/IconV2/IconsSvg'
 import { Link } from 'react-router-dom'
 
 export const TransactionHistory = () => {
