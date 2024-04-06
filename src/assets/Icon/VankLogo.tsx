@@ -9,8 +9,8 @@ const VankLogo = ({
 }) => {
   return (
     <svg
-      width="122"
-      height="36"
+      width="207"
+      height="71"
       viewBox="0 0 122 36"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

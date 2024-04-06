@@ -70,16 +70,13 @@ body {
 
 nav a:hover,
 nav a.active {
-  color: #ffed00;
+  font-weight: 700;
 }
 
 nav a:focus,
 nav a.active {
-  width: 227px;
-  position: relative;
-  z-index: 50000;
-  border-right: 6px solid #ffed00;
-
-  /* background: red; */
+  font-weight: 700;
+  
 }
+
 

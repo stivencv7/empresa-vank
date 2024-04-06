@@ -19,11 +19,11 @@ export const Header = ({ className }: { className?: string }) => {
   return (
     // return (
     <header className={className}>
-      <div className=" w-full xl:h-[68px] flex justify-between items-center bg-[#191E25] ">
-        <div className="xl:w-[160px] flex items-center xl:h-[68px]">
+      <div className=" w-full xl:h-[68px] flex justify-between items-center">
+        <div className="xl:w-[160px] flex items-center xl:h-[68px] ">
           <VankLogo
-            className="2xl:w-[151.94px] 2xl:h-[52px] lg:w-[115px] sm:h-[29px] sm:w-[97px] absolute z-[100]  xl:w-[151.94px] xl:h-[32px]"
-            fill={"#FFED00"}
+            className="2xl:w-52 2xl:h-[52px] lg:w-[115px] sm:h-[29px]  absolute z-[100]  xl:h-[32px]"
+            fill={"#14181F"}
           />
         </div>
 
