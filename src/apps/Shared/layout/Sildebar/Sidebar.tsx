@@ -1,13 +1,9 @@
-
 import VankLogo from "@/assets/Icon/VankLogo";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { IconHome, IconCard, IconBalances, IconLogout, IconSettings, IconCrypto, IconUsers } from "@/assets/IconV2/IconsSvg";
+import { IconHome, IconCard, IconBalances, IconLogout, IconSettings, IconCrypto, IconUsers, IconHelpCenter } from "@/assets/IconV2/IconsSvg";
 
-
-
-import { IconHelpCenter } from "@/assets/IconV2/IconHelpCenter";
 export const Sidebar = ({
   className,
 }: {

@@ -1,5 +1,5 @@
 import { ArrowHide } from "@/assets/Icon/ArrowHide"
-import { IconUser } from "@/assets/IconV2/IconUser"
+import { IconUser } from "@/assets/IconV2/IconsSvg"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import imgProfile from "@/assets/imgProfile.png"
@@ -19,7 +19,7 @@ export const ModalProfile = () => {
       </div>
       {
         visible &&
-        <div onMouseLeave={() => setVisible(false)} className="w-[438px] flex flex-col justify-center items-center absolute top-[94px] shadow-[#0000001A] shadow-lg  rounded-3xl right-16 z-50  h-[15.1875rem] bg-[#F2F5F7]">
+        <div onMouseLeave={() => setVisible(false)} className="w-[438px] flex flex-col justify-center items-center absolute top-[94px] shadow-[#0000001A] shadow-lg  rounded-3xl right-0 z-50  h-[15.1875rem] bg-[#F2F5F7]">
 
           <div className="w-[402px] h-[156px] flex items-center justify-between">
             

@@ -11,16 +11,9 @@ export const Root = () => {
   
   return (
     <div className="h-[100vh] flex bg-[#FCFCFD]">
-      {/*<Header
-        className={
-          "relative h-[10%] w-[100%] px-[36px]  flex items-center "
-        }
-      />*/}
-      {/* estamos viendo el sm y el md */}
-
-      <Sidebar className={`h-full  bg-[#FCFCFD]  w-[17.4375rem] xl:w-[13.4375rem] flex flex-col justify-between pt-[1.125rem]`}/>
-
-      <div className=" w-full pt-8 px-20 flex  overflow-hidden">
+      <Sidebar className={`h-full  bg-[#FCFCFD]  w-[17.4375rem] xl:w-[15.4375rem] flex flex-col justify-between pt-[1.125rem] fixed z-50`}/>
+      
+      <div className=" w-full  px-20 flex ">
         <Outlet />
       </div>
     </div>
