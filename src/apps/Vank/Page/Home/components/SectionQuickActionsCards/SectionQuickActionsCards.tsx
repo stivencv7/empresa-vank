@@ -7,7 +7,7 @@ export const SectionQuickActionsCards = () => {
   const [stroke,setStroke]=useState(0)
   
   return (
-    <div className='grid grid-cols-6 gap-[30px]'>
+    <div className='grid grid-cols-6 gap-[24px] w-[1273px]'>
         <QuickActionsCards onMouseEnter={()=>setStroke(1)} onMouseLeave={()=>setStroke(0)} text='Send' icon={<IconSend className='max-2xl:w-14' stroke={stroke==1?'#FFED00':'#191E25'}/>} moreStyle='quickActionsCards group'/>
         <QuickActionsCards onMouseEnter={()=>setStroke(2)} onMouseLeave={()=>setStroke(0)} text='Deposit' icon={<IconDeposit className='max-2xl:w-14' stroke={stroke==2?'#FFED00':'#191E25'} />} moreStyle='quickActionsCards group'/>
         <QuickActionsCards onMouseEnter={()=>setStroke(3)} onMouseLeave={()=>setStroke(0)} text='Convert' icon={<IconConvert className='max-2xl:w-14' stroke={stroke==3?'#FFED00':'#191E25'}/>} moreStyle='quickActionsCards group'/>

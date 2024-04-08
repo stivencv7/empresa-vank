@@ -11,7 +11,7 @@ export const ModalProfile = () => {
 
   return (
     <>
-      <div className="flex items-center gap-4 ">
+      <div className="flex items-center gap-4">
         <div onClick={() => setVisible(!visible)} className="bg-[#F2F5F7] cursor-pointer rounded-full w-12 h-12 flex items-center justify-center peer hover:border-[1px]  hover:border-[#C6C8CA]">
           <IconUser />
         </div>
@@ -19,7 +19,7 @@ export const ModalProfile = () => {
       </div>
       {
         visible &&
-        <div onMouseLeave={() => setVisible(false)} className="w-[438px] flex flex-col justify-center items-center absolute top-[94px] shadow-[#0000001A] shadow-lg  rounded-3xl right-0 z-50  h-[15.1875rem] bg-[#F2F5F7]">
+        <div onMouseLeave={() => setVisible(false)} className="w-[438px] flex flex-col justify-center items-center absolute top-[70px] shadow-[#0000001A] shadow-lg  rounded-3xl right-0 z-50  h-[15.1875rem] bg-[#F2F5F7]">
 
           <div className="w-[402px] h-[156px] flex items-center justify-between">
             

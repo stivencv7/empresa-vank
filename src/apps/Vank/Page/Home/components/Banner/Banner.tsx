@@ -41,20 +41,20 @@ export const Banner = () => {
   }, []);
   
   return (
-    <div className='w-full 2xl:h-[21.25rem] relative bg-[#FCFCFD]'>
+    <div className='w-full 2xl:h-[21.25rem] relative h-full  flex items-center justify-center'>
 
       
       {/* <img src={''} alt="" className='rounded-3xl 2xl:h-full 2xl:w-full'/> */}
-      <div className="carousel">
+      <div className="carousel bg-transparent rounded-2xl ">
       <label className='absolute z-50 w-[4.8125rem] bg-[#FFED00]  px-4 py-2 rounded-tl-3xl rounded-br-2xl text-[#14181F] text-sm font-bold'>Nuevo</label>
-        <div className="slides">
+        <div className="slides ">
       
           {images.map((image, index) => (
             <div
               key={index}
               className={index === currentIndex ? 'slide active' : 'slide'}
             >
-              <img src={image} alt={`Slide ${index}`} className='h-full  shadow-xl rounded-2xl' />
+              <img src={image} alt={`Slide ${index}`} className='w-full h-fullbg-cover ' />
             </div>
           ))}
         </div>

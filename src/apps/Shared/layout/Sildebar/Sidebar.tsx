@@ -88,8 +88,8 @@ export const Sidebar = ({
   return (
     <div className={className} >
       <div className=" w-[17.4375rem] h-[35.9688rem] flex  flex-col gap-y-8">
-        <div className=" w-[17.4375rem] h-[107px] flex items-center justify-center">
-          <VankLogo fill="#14181F" className="w-52 h-[4.4375rem]" />
+        <div className=" w-[17.4375rem] h-[107px] flex items-center justify-center ">
+          <VankLogo fill="#14181F" className="2xl:w-[208px]  2xl:h-[90px]" />
         </div>
 
         <nav className="w-[17.4375rem]  flex gap-2 flex-col items-center px-6  ">

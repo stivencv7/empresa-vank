@@ -7,10 +7,10 @@ export const Header = () => {
   return (
 
     <>
-      <header className={'flex flex-col sticky top-0  z-50 bg-[#FCFCFD] pt-8'}>
+      <header className={'flex flex-col sticky top-0  z-50 bg-transparent pt-8 w-[1401px] px-[64px]'}>
 
-        <div className=" w-full h-[3rem] flex gap-3  justify-end">
-          <div className="border-[1px] border-[#C9CBCE] rounded-full w-12 h-12 flex items-center justify-center">
+        <div className=" w-full h-[3rem] flex gap-3  justify-end relative  -right-[140px]">
+          <div className="border-[1px] border-[#C9CBCE] rounded-full w-12 h-12 flex items-center justify-center ">
             <IconNotification />
           </div>
           <ModalProfile />

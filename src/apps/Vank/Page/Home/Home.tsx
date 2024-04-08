@@ -14,29 +14,27 @@ const Home = () => {
   }, [value]);
 
   return (
-    <div className="w-full 2xl:overflow-hidden  flex flex-col gap-7 h-full xl:max-2xl:gap-6 relative ml-[200px] bg-[#FCFCFD]">
-        
-        <Header/>
-      
+    <div className="w-full 2xl:overflow-hidden  flex flex-col gap-7 h-full xl:max-2xl:gap-6 relative items-center justify-between ">
 
-        {/* <p className=''>{"What would you like to do today?"}</p> */}
+      <Header />
+      {/* <p className=''>{"What would you like to do today?"}</p> */}
+      <section className="w-[1401px] px-[64px]">
         <SectionQuickActionsCards />
+      </section>
 
-        <section className='flex flex-col gap-y-4 '>
-          <Balances />
-        </section>
+      <section className='flex flex-col gap-y-4 w-[1401px] px-[64px]'>
+        <Balances />
+      </section>
 
-        <section className=" 2xl:w-[1,641px] h-[257px] flex gap-8 bg-bg-[#FCFCFD]">
+      <section className=" w-[1401px] px-[64px]  h-full flex gap-[24px] xl:max-2xl:pb-10 ">
+        <TransactionHistory />
+        <Banner />
 
-          <TransactionHistory /> 
-          <Banner />
+      </section>
+      <br />
+    </div>
 
-        </section>
 
-
-      </div>
-
-   
   );
 };
 

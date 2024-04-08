@@ -8,11 +8,12 @@ export const TransactionHistory = () => {
         { name: 'Joseph Baket', date: '4 Apr 2023', amoutn: '1,420.72', typeAssect: 'USD', typeAction: 'recived' },
         { name: 'Joseph Baket', date: '4 Apr 2023', amoutn: '1,420.72', typeAssect: 'USD', typeAction: 'recived' },
         { name: 'Joseph Baket', date: '4 Apr 2023', amoutn: '1,420.72', typeAssect: 'USD', typeAction: 'recived' },
+        { name: 'Joseph Baket', date: '4 Apr 2023', amoutn: '1,420.72', typeAssect: 'USD', typeAction: 'recived' },
         
     ]
 
     return (
-        <div className='w-[38.5625rem] 2xl:h-[23.125rem] flex flex-col gap-4  pt-2 '>
+        <div className='w-[484px] 2xl:h-[23.125rem] flex flex-col gap-4  pt-2 '>
             <header className='flex justify-between w-full'>
                 <h1 className='text-[#5E6061] text-xl'>Transactions</h1>
                 <div>
@@ -20,10 +21,10 @@ export const TransactionHistory = () => {
                 </div>
             </header>
             
-            <div className=' 2xl:w-[38.5625rem] 2xl:h-[18rem] px-4 flex flex-col justify-between bg-[#FFFF] rounded-[16px] shadow-sm pb-4'>
+            <div className=' 2xl:w-[484px] 2xl:h-[335px] px-4 flex flex-col justify-between bg-[#FFFF] rounded-[16px] shadow-sm pb-4'>
 
                 {history.map((item, index) => (
-                    <div key={index} className='flex justify-between items-center py-2 border-b-[1px]'>
+                    <div key={index} className='flex justify-between items-center py-2 border-b-[1px] '>
 
                         <div className='flex gap-4 items-center '>
                             <CustomCircle moreStyle='h-[50px] w-[50px]' icon={<IconArrow/>}/>
